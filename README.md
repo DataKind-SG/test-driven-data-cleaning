@@ -3,6 +3,9 @@
 Scaffold out methods and tests for collaborative data cleaning.
 
 # Usage:
+
+This has been tested on OSX with Python 3.5. It should work on Linux and Python 2.7 and above. It may work on Windows (but probably not).
+
 Once you clone the repo, to try it out on a very small included dataset, you can run:
 
 ```$ python tddc.py summarize input/foobar_data.csv```
