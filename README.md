@@ -17,6 +17,11 @@ Finally, you can run:
 ```python tddc.py build input/foobar_data.csv```
 This outputs a script into the output/ folder that contains method stubs and glue code to clean the data set. It also outputs stubs for tests in output/tests.
 
+## Running tests
+
+You can run the tests with 
+```py.test```
+in the root of the project directory.
 
 # TO DO:
 
