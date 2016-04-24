@@ -5,20 +5,20 @@ Scaffold out methods and tests for collaborative data cleaning.
 # Usage:
 Once you clone the repo, to try it out on a very small included dataset, you can run:
 
-```python tddc.py summarize input/foobar_data.csv```
+```$ python tddc.py summarize input/foobar_data.csv```
 
 This takes the csv data set and summarizes it, outputing to a json file in a newly created output/ directory.
 
 Next, you can run:
 
-```python tddc.py build_trello input/foobar_data.csv```
+```$ python tddc.py build_trello input/foobar_data.csv```
 
 The first time you run this, it will fail and give you instructions on how to create a Trello configuration file in your root directory (in future, this should probably be created through the CLI).
 Once you create it, you can try to run that step again. This will create a Trello board. The one my run created is here: https://trello.com/b/1mFkX6dA/data-cleaning-board-for-foobar-data
 
 Finally, you can run:
 
-```python tddc.py build input/foobar_data.csv```
+```$ python tddc.py build input/foobar_data.csv```
 
 This outputs a script into the output/ folder that contains method stubs and glue code to clean the data set. It also outputs stubs for tests in output/tests.
 
@@ -26,7 +26,7 @@ This outputs a script into the output/ folder that contains method stubs and glu
 
 You can run the tests with 
 
-```py.test```
+```$ py.test```
 
 in the root of the project directory.
 
