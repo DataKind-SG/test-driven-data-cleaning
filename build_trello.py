@@ -1,6 +1,4 @@
 import os
-import json
-import sys
 from functools import lru_cache
 
 import common
