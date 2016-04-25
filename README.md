@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/DataKind-SG/test-driven-data-cleaning.svg?branch=master)](https://travis-ci.org/DataKind-SG/test-driven-data-cleaning)
+
 # test-driven-data-cleaning
 
 Scaffold out methods and tests for collaborative data cleaning.
