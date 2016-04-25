@@ -7,9 +7,8 @@ python:
 os:
     - linux
 before_install:
-    pip install pytest==2.8.4 pytest-cov==2.2.0
-    pip install coveralls=1.1
-    pip install py-trello==0.4.3 docopt==0.6.2 backports.functools_lru_cache==1.2.1 PyYAML==3.11
+    pip install pytest==2.8.4 pytest-cov==2.2.0 coveralls=1.1
+    py-trello==0.4.3 docopt==0.6.2 backports.functools_lru_cache==1.2.1 PyYAML==3.11
 after_success:
     - if [[ $ENV == python=3.4* ]]; then
         coveralls;
