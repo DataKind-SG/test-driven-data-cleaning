@@ -21,7 +21,13 @@ def test_go(fixtures_dir, input_filename, summary_filename, tmpdir, null_string)
     actual_summary_data = common.read_json_file(output_file)
 
     expected_summary_data = common.read_json_file(os.path.join(fixtures_dir, summary_filename))
-    assert actual_summary_data == expected_summary_data
+
+    # the "file" key is a full path to the summary file and can't be tested across different machines
+    expected_keys = expected_summary_data.keys()
+    assert actual_summary_data.keys() == expected_keys
+    for key in expected_keys:
+        if key != 'file':
+            assert actual_summary_data[key] == expected_summary_data[key]
 
 
 def test_count_nulls(column_data, summary_class):
