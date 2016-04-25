@@ -6,8 +6,7 @@ python:
     - "3.5"
 os:
   - linux
-  - osx
 before_install:
-    pip install pytest pytest-cov py-trello
+    pip install pytest==2.8.4 pytest-cov==2.2.0 py-trello==0.4.3 docopt==0.6.2 backports.functools_lru_cache==1.2.1 PyYAML==3.11
 script:
     - py.test
