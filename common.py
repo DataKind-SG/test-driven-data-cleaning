@@ -27,7 +27,7 @@ def write_summary(summary_data, output_dir, base_name, prefix=''):
     """
     filename = get_summary_filename(output_dir, base_name, prefix)
     with open(filename, 'wt') as writer:
-        writer.write(json.dumps(summary_data))
+        writer.write(json.dumps(summary_data, allow_nan=True, indent=1))
 
     print('{} summary of {} is located at: {}'.format(prefix, base_name, filename))
     return filename
