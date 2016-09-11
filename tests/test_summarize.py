@@ -63,6 +63,7 @@ def test_is_int():
     assert summarize.is_int(0)
     assert not summarize.is_int(1.2)
     assert not summarize.is_int('foo')
+    assert not summarize.is_int(float('inf'))
 
 
 def test_get_numeric_data(column_data):

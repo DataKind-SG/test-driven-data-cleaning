@@ -137,7 +137,7 @@ def is_int(candidate):
     try:
         assert candidate == int(candidate)
         return True
-    except (ValueError, AssertionError):
+    except (ValueError, AssertionError, OverflowError):
         return False
 
 
