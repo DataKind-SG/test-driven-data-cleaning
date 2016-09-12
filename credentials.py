@@ -20,7 +20,7 @@ class TrelloConnector(object):
         self._token = None
 
     def _set_creds(self):
-        config_file = os.path.join(os.path.expanduser('~'), '.trello_config.yml')
+        config_file = os.path.join(os.path.expanduser('~'), '.tddc_config.yml')
         if not os.path.isfile(config_file):
             print('Trello configuration file not found at ' + config_file)
             self._write_config()
@@ -61,10 +61,10 @@ class TrelloConnector(object):
     @staticmethod
     def _write_config():
         print('TrelloCredentials._write_configuration not yet implemented. For now, you can create a file '
-              '.trello_config.yml in the user root directory with the format:')
+              '.tddc_config.yml in the user root directory with the format:')
         print(' ')
-        print('[trello]')
-        print('    api_key: <TRELLO_API_KEY>')
+        print('trello:')
+        print('    api_key: <TRELL_API_KEY>')
         print('    token: <TRELLO_TOKEN>')
         print(' ')
         print('You can get your Trello API key here: https://trello.com/app-key')
