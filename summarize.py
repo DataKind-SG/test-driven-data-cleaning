@@ -107,7 +107,7 @@ class Summary(object):
             'min': min(numeric_data),
             'mean': get_mean(numeric_data),
             'n_non_numeric': len(nonnumeric_nonnull_data),
-				'n_unique': len(set(column_data)),
+            'n_unique': len(set(column_data)),
             'max_length': max(length_data),
             'mean_length': get_mean(length_data),
             'freq_values': freq_values,
@@ -137,7 +137,7 @@ def is_int(candidate):
     try:
         assert candidate == int(candidate)
         return True
-    except (ValueError, AssertionError):
+    except (ValueError, AssertionError, OverflowError):
         return False
 
 
