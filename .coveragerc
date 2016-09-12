@@ -1,5 +1,5 @@
 [run]
-omit = output/*, tests/*
+omit = output/*, tests/*, .direnv/*
 
 [report]
 exclude_lines =
