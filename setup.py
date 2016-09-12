@@ -17,8 +17,7 @@ setup(
     name='test-driven-data-cleaning',
     install_requires=install_requires,
     version=version,
-    packages=['tddc'],
-    package_data={'': ['VERSION', '*.sql']},
+    package_data={'': ['VERSION']},
     url='https://github.com/DataKind-SG/test-driven-data-cleaning',
     author='Oliver Chen',
     author_email='oliverxchen@gmail.com'
