@@ -13,9 +13,7 @@ Options:
   --null=<NA>     Null string [default: NA]
 """
 from docopt import docopt
-import summarize
-import build_trello
-import build
+from tddc import summarize, build_trello, build
 import os
 import sys
 

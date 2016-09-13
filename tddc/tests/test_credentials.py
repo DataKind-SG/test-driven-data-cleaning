@@ -1,9 +1,10 @@
 from mock import patch
-import credentials
+
+from tddc import credentials
 
 
-@patch('credentials.os.path.expanduser')
-@patch('credentials.TrelloClient')
+@patch('tddc.credentials.os.path.expanduser')
+@patch('tddc.credentials.TrelloClient')
 def test_go(mock_trello_client, mock_expanduser, fixtures_dir):
     mock_expanduser.return_value = fixtures_dir
     credentials.TrelloConnector().get_client()
