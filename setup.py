@@ -16,8 +16,8 @@ except FileNotFoundError:
 install_requires = [
     'backports.functools_lru_cache==1.2.1',
     'docopt==0.6.2',
-    'py-trello==0.4.3',
-    'PyYAML==3.11',
+    'py-trello==0.6.1',
+    'PyYAML==3.12',
 ]
 
 setup(
