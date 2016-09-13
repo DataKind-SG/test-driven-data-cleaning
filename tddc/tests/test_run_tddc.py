@@ -2,7 +2,7 @@ import pytest
 import os
 from mock import patch
 
-from tddc import tddc, common
+from tddc import run_tddc, common
 
 
 @pytest.fixture(scope='module')
@@ -11,15 +11,15 @@ def root_dir():
 
 
 def test_get_input_root_dir(root_dir):
-    assert tddc.get_input_root_dir() == root_dir
+    assert run_tddc.get_input_root_dir() == root_dir
 
 
 def test_get_output_root_dir(root_dir):
-    assert tddc.get_output_root_dir() == root_dir
+    assert run_tddc.get_output_root_dir() == root_dir
 
 
-@patch('tddc.tddc.get_input_root_dir')
-@patch('tddc.tddc.get_output_root_dir')
+@patch('tddc.run_tddc.get_input_root_dir')
+@patch('tddc.run_tddc.get_output_root_dir')
 def test_cli_summarize(
         mock_output_root_dir, mock_input_root_dir, fixtures_dir, input_filename, null_string, tmpdir
 ):
@@ -37,12 +37,12 @@ def test_cli_summarize(
     # test_summarize.py already tests the content of the file. This just tests that the CLI works properly and
     # generates a file at the expected location.
     assert not os.path.isfile(expected_output_loc)
-    tddc.execute(cli_args)
+    run_tddc.execute(cli_args)
     assert os.path.isfile(expected_output_loc)
 
 
-@patch('tddc.tddc.get_input_root_dir')
-@patch('tddc.tddc.get_output_root_dir')
+@patch('tddc.run_tddc.get_input_root_dir')
+@patch('tddc.run_tddc.get_output_root_dir')
 @patch('tddc.build_trello.Trello.client')
 def test_cli_build_trello(
         mock_client, mock_output_root_dir, mock_input_root_dir, fixtures_dir, input_filename, tmpdir
@@ -64,5 +64,5 @@ def test_cli_build_trello(
     # test_build_trello.py already tests the content of the file. This just tests that the CLI works properly and
     # generates a file at the expected location.
     assert not os.path.isfile(expected_output_loc)
-    tddc.execute(cli_args)
+    run_tddc.execute(cli_args)
     assert os.path.isfile(expected_output_loc)

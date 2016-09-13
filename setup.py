@@ -21,7 +21,7 @@ install_requires = [
 ]
 
 setup(
-    name='test-driven-data-cleaning',
+    name='tddc',
     install_requires=install_requires,
     version=version,
     packages=['tddc'],
