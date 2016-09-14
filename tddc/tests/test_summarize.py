@@ -2,8 +2,7 @@ from pytest import fixture
 import os
 import math
 
-import summarize
-import common
+from tddc import summarize, common
 
 
 @fixture(scope='module')
@@ -89,8 +88,8 @@ def test_get_mean():
 
 
 def test_get_most_frequent():
-    #TODO: this demos the function, but is not really desirable behaviour. Should trim beginning and ending white
-    # space at some point.
+    # TODO: this demos the function, but is not really desirable behaviour.
+    # Should trim beginning and ending white space at some point.
     values, counts = summarize.get_most_frequent(['1', '1 ', '1'])
     assert values == ['1', '1 ']
     assert counts == [2, 1]

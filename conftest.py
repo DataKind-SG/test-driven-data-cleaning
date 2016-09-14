@@ -4,7 +4,7 @@ import os
 
 @fixture(scope='session')
 def fixtures_dir():
-    return os.path.join(os.path.dirname(__file__), 'tests', 'fixtures')
+    return os.path.join(os.path.dirname(__file__), 'tddc', 'tests', 'fixtures')
 
 
 @fixture()

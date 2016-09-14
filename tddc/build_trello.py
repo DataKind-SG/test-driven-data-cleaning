@@ -4,8 +4,8 @@ try:
 except ImportError:
     from backports.functools_lru_cache import lru_cache
 
-import common
-from credentials import TrelloConnector
+from tddc import common
+from tddc.credentials import TrelloConnector
 
 
 def go(summary_root_dir, input_file, trello_summary_root_dir, output_dir):

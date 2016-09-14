@@ -4,7 +4,7 @@ try:
 except ImportError:
     from backports.functools_lru_cache import lru_cache
 
-import common
+from tddc import common
 
 
 def go(summaries_root_dir, input_file, scripts_root_dir, output_dir):

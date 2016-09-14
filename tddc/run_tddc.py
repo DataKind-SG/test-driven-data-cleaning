@@ -1,10 +1,10 @@
 """Test driven data cleaning
 Usage:
-  tddc.py summarize <input_file> [--output=<dir>] [--null=<NA>]
-  tddc.py build_trello <input_file> [--output=<dir>]
-  tddc.py build <input_file> [--output=<dir>]
-  tddc.py -h | --help
-  tddc.py --version
+  tddc summarize <input_file> [--output=<dir>] [--null=<NA>]
+  tddc build_trello <input_file> [--output=<dir>]
+  tddc build <input_file> [--output=<dir>]
+  tddc -h | --help
+  tddc --version
 
 Options:
   -h --help       Show this screen.
@@ -13,11 +13,11 @@ Options:
   --null=<NA>     Null string [default: NA]
 """
 from docopt import docopt
-import summarize
-import build_trello
-import build
 import os
 import sys
+
+import tddc
+from tddc import summarize, build_trello, build
 
 
 def get_input_root_dir():
@@ -29,7 +29,7 @@ def get_output_root_dir():
 
 
 def execute(cli_args):
-    arguments = docopt(__doc__, cli_args, version='TDDC 0.01')
+    arguments = docopt(__doc__, cli_args, version=tddc.__version__)
     if arguments['summarize']:
         summarize.go(
             input_root_dir=get_input_root_dir(),

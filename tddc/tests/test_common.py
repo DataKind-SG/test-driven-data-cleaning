@@ -1,7 +1,7 @@
 import pytest
 import os
 
-import common
+from tddc import common
 
 
 def test_get_base_filename():
