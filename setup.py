@@ -25,6 +25,7 @@ setup(
     install_requires=install_requires,
     version=version,
     packages=['tddc'],
+    scripts=['bin/tddc'],
     url='https://github.com/DataKind-SG/test-driven-data-cleaning',
     author='Oliver Chen',
     author_email='oliverxchen@gmail.com'

@@ -29,7 +29,8 @@ Finally, you can run:
 
 This outputs a script into the output/ folder that contains method stubs and glue code to clean the data set. It also outputs stubs for tests in output/tests.
 
-## Running tests
+Running tests
+=============
 
 You can run the tests with 
 
@@ -43,7 +44,7 @@ TO DO:
 
 1. allow creation of Trello credentials through CLI
 2. more complete testing
-3. ~~travis~~
+3. travis [COMPLETE]
 4. coveralls
 5. allow user to skip Trello step
 6. other integrations besides Trello?
