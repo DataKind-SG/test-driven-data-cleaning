@@ -7,7 +7,7 @@ try:
     version_file = os.path.join(
         os.path.dirname(os.path.abspath(__file__)), 'VERSION')
     version = open(version_file, 'rt').read().strip()
-except FileNotFoundError:
+except IOError:
     package_info_file = os.path.join(
         os.path.dirname(os.path.abspath(__file__)), 'PKG-INFO')
     info = open(package_info_file, 'rt').read()
