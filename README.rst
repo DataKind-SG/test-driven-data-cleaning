@@ -26,7 +26,7 @@ Next, you can run:
 ``$ tddc build_trello foobar_data.csv``
 
 The first time you run this, it will fail and give you instructions on how to create a Trello configuration file in your root directory (in future, this should probably be created through the CLI).
-Once you create it, you can try to run that step again. This will create a Trello board. The one my run created is here: https://trello.com/b/1mFkX6dA/data-cleaning-board-for-foobar-data
+Once you create it, you can try to run that step again. This will create a Trello board. The one my run created is here: https://trello.com/b/cqP9VZal/data-cleaning-board-for-foobar-data 
 
 Finally, you can run:
 
@@ -56,6 +56,6 @@ TO DO:
 7. allow other formats besides CSV
 8. better readme (explanation for how this should be used by team leads and team members).
 9. better sample dataset
-10. packaging
+10. packaging [COMPLETE]
 11. export to Jupyter notebook
 12. ...
