@@ -10,7 +10,7 @@ For a given tabular data set, a Trello board is populated with cards for each co
 Usage:
 ======
 
-This works on Linux with Python 2.7, 3.3, 3.4 and 3.5, and on OSX with Python 2.7 and 3.5 (and probably 3.3 and 3.4, but that hasn't been tested.  
+This works on Linux with Python 2.7, 3.3, 3.4 and 3.5, and on OSX with Python 2.7 and 3.5 (and probably 3.3 and 3.4, but those haven't been tested).  
 It works on Windows (tested using Python 3.5.2 :: Anaconda 4.1.1 (64-bit)). 
 Integration with Trello on Windows using tddc is yet to be tested though.
 
