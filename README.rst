@@ -2,7 +2,9 @@
     :target: https://travis-ci.org/DataKind-SG/test-driven-data-cleaning# Test Driven Data Cleaning
     :alt: Build Status
 
-Scaffold out methods and tests for collaborative data cleaning.
+This package provides a framework for collaborative, test-driven data cleaning. The framework enables a reproducible method for data cleaning that can be easily validated.
+    
+For a given tabular data set, a Trello board is populated with cards for each column so that team members can tag themselves to a column and ensure that work does not overlap. The cards include summary statistics of the columns that can be useful for writing methods to clean the column. Method stubs and test stubs are also scaffolded out for team members to fill out.
 
 ======
 Usage:
@@ -36,28 +38,19 @@ Finally, you can run:
 
 This outputs a script into the output/ folder that contains method stubs and glue code to clean the data set. It also outputs stubs for tests in output/.
 
-Running tests
+Contributing:
 =============
 
-You can run the tests with 
+Before running the tests, you'll need to run:
+
+``$ pip install pytest pytest-cov mock``
+
+Then, in the root of the project directory you can run the tests with:
 
 ``$ py.test``
 
-in the root of the project directory.
+We're trying out the new Github projects feature. The project we're currently working on is https://github.com/DataKind-SG/test-driven-data-cleaning/projects/1
 
+Each card is an issue that you can click through to. If you'd like to take a card (thank you!), move the card to the "In progress" column and assign yourself to the issue. Once you're finished, issue a pull request and move the card to "For review". 
 
-TO DO:
-======
-
-1. allow creation of Trello credentials through CLI
-2. more complete testing
-3. travis [COMPLETE]
-4. coveralls
-5. allow user to skip Trello step
-6. other integrations besides Trello?
-7. allow other formats besides CSV
-8. better readme (explanation for how this should be used by team leads and team members).
-9. better sample dataset
-10. packaging [COMPLETE]
-11. export to Jupyter notebook
-12. ...
+If you think of a new issue, create the card in the appropriate project and convert the card to an issue in the pull-down menu (it's currently not possible to link to an already created issue from a card).
