@@ -34,11 +34,11 @@ In the same directory as the file, run:
 
 This takes the csv data set and summarizes it, outputing to a json file in a newly created output/ directory.
 
-If this is the first time you're running this, you should create a Trello configuration file named `.tddc_config.yml` in your user root directory with the format:
+If this is the first time you're running this, you should create a Trello configuration file named `.tddc_config.yml` in your user root directory with the format::
  
-trello::
-    api_key: <TRELL_API_KEY>
-    token: <TRELLO_TOKEN>
+    trello:
+        api_key: <TRELL_API_KEY>
+        token: <TRELLO_TOKEN>
  
 You can get your Trello API key here: https://trello.com/app-key
 
