@@ -30,6 +30,8 @@ class Scripts(object):
         self._summary = None
         self._trello_summary = None
         self._scripts_dir = os.path.join(scripts_root_dir, output_dir)
+        self.set_summary_data()
+        self.set_trello_summary_data()
 
     @property
     @lru_cache()
@@ -48,8 +50,6 @@ class Scripts(object):
         return self._scripts_dir
 
     def run(self):
-        self.set_summary_data()
-        self.set_trello_summary_data()
         cleaning_filename = self.write_cleaning_script()
         test_cleaning_filename = self.write_test_cleaning_script()
         return cleaning_filename, test_cleaning_filename
