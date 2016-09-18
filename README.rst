@@ -9,6 +9,12 @@ This package provides a framework for collaborative, test-driven data cleaning. 
     
 For a given tabular data set, a Trello board is populated with cards for each column so that team members can tag themselves to a column and ensure that work does not overlap. The cards include summary statistics of the columns that can be useful for writing methods to clean the column. Method stubs and test stubs are also scaffolded out for team members to fill out.
 
+==============
+Pre-requisite:
+==============
+
+You should have an existing Trello account. If not, you can create one at https://trello.com/
+
 ======
 Usage:
 ======
@@ -28,12 +34,20 @@ In the same directory as the file, run:
 
 This takes the csv data set and summarizes it, outputing to a json file in a newly created output/ directory.
 
+If this is the first time you're running this, you should create a Trello configuration file named `.tddc_config.yml` in your user root directory with the format:
+ 
+``trello:
+    api_key: <TRELL_API_KEY>
+    token: <TRELLO_TOKEN>``
+ 
+You can get your Trello API key here: https://trello.com/app-key
+You can get your Trello token here: https://trello.com/1/authorize?expiration=1day&scope=read,write,account&response_type=token&name=Server%20Token&key=<TRELLO_API_KEY>
+
 Next, you can run:
 
 ``$ tddc build_trello foobar_data.csv``
 
-The first time you run this, it will fail and give you instructions on how to create a Trello configuration file in your root directory (in future, this should probably be created through the CLI).
-Once you create it, you can try to run that step again. This will create a Trello board. The one my run created is here: https://trello.com/b/cqP9VZal/data-cleaning-board-for-foobar-data 
+This will create a Trello board. The one my run created is here: https://trello.com/b/cqP9VZal/data-cleaning-board-for-foobar-data 
 
 Finally, you can run:
 
