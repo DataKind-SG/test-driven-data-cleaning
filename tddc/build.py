@@ -142,12 +142,14 @@ class Scripts(object):
         return test_cleaning_filename
 
     def write_test_cleaning_boilerplate(self, writer):
+        writer.write('import pytest\n')
         writer.write('import clean_' + self.base_name)
 
     def write_test_cleaning_column_method(self, writer, column_number):
         column_name = self._summary['column_names'][column_number]
         method_list = [
             '\n\n',
+            '@pytest.mark.skip',
             'def test_clean_col_{}():'.format(str(column_number)),
             '    """',
             '    Test the cleaning for column: "{}"'.format(column_name),
