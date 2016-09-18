@@ -1,6 +1,8 @@
+import pytest
 import clean_foo_data
 
 
+@pytest.mark.skip
 def test_clean_col_0():
     """
     Test the cleaning for column: "a"
@@ -9,6 +11,7 @@ def test_clean_col_0():
     assert False
 
 
+@pytest.mark.skip
 def test_clean_col_1():
     """
     Test the cleaning for column: "b"
@@ -17,6 +20,7 @@ def test_clean_col_1():
     assert False
 
 
+@pytest.mark.skip
 def test_clean_col_2():
     """
     Test the cleaning for column: "c"
