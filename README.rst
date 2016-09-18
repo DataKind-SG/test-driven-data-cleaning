@@ -24,6 +24,7 @@ It works on Windows (tested using Python 3.5.2 :: Anaconda 4.1.1 (64-bit)).
 Integration with Trello on Windows using tddc is yet to be tested though.
 
 Install the package with:
+
 ``$ pip install tddc``
 
 You can download a tiny example CSV file at: https://github.com/DataKind-SG/test-driven-data-cleaning/raw/master/input/foobar_data.csv
@@ -34,7 +35,7 @@ In the same directory as the file, run:
 
 This takes the csv data set and summarizes it, outputing to a json file in a newly created output/ directory.
 
-If this is the first time you're running this, you should create a Trello configuration file named `.tddc_config.yml` in your user root directory with the format::
+If this is the first time you're running this, you should create a Trello configuration file named ``.tddc_config.yml`` in your user root directory with the format::
  
     trello:
         api_key: <TRELL_API_KEY>
