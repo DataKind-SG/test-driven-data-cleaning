@@ -1,0 +1,29 @@
+import pytest
+import clean_foo_data
+
+
+@pytest.mark.skip
+def test_clean_col_0():
+    """
+    Test the cleaning for column: "a"
+    """
+    assert clean_foo_data.clean_col_0('NA') == 'NA'
+    assert False
+
+
+@pytest.mark.skip
+def test_clean_col_1():
+    """
+    Test the cleaning for column: "b"
+    """
+    assert clean_foo_data.clean_col_1('NA') == 'NA'
+    assert False
+
+
+@pytest.mark.skip
+def test_clean_col_2():
+    """
+    Test the cleaning for column: "c"
+    """
+    assert clean_foo_data.clean_col_2('NA') == 'NA'
+    assert False
