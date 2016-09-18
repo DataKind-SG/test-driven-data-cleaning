@@ -7,10 +7,12 @@ python:
 os:
     - linux
 before_install:
-    - pip install pytest==3.0.2 pytest-cov==2.3.1 coveralls==1.1
+    - pip install pytest==3.0.2 pytest-cov==2.3.1
+    - pip install coveralls==1.1
+install:
     - pip install -e .
 after_success:
-    - if [[ $ENV == python=3.4* ]]; then
+    - if [[ $TRAVIS_PYTHON_VERSION == 3.5 ]]; then
         coveralls;
       fi
 script:

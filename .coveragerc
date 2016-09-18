@@ -1,5 +1,5 @@
 [run]
-omit = output/*, tests/*, .direnv/*
+omit = output/*, tddc/tests/*, .direnv/*, setup.py, conftest.py
 
 [report]
 exclude_lines =
