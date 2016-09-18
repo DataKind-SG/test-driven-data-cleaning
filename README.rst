@@ -43,7 +43,7 @@ If this is the first time you're running this, you should create a Trello config
  
 You can get your Trello API key here: https://trello.com/app-key
 
-Add your Trello API key to the end of this URL to get your Trello token::
+Replace your Trello API key at the end of this URL to get your Trello token::
 
     https://trello.com/1/authorize?expiration=1day&scope=read,write,account&response_type=token&name=Server%20Token&key=<TRELLO_API_KEY>
 
