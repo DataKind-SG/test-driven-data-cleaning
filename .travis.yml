@@ -12,8 +12,7 @@ before_install:
 install:
     - pip install -e .
 after_success:
-    - echo $ENV
-    - if [[ $ENV == python=3.5* ]]; then
+    - if [[ $TRAVIS_PYTHON_VERSION == 3.5 ]]; then
         coveralls;
       fi
 script:
