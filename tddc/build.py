@@ -129,10 +129,8 @@ class Scripts(object):
         writer.write('\n'.join(method_list))
 
     def write_test_cleaning_script(self):
-        test_dir = 'tests'
-        common.dir_exists_or_make(os.path.join(self.scripts_dir, test_dir))
         test_cleaning_filename = os.path.join(
-            self.scripts_dir, test_dir, 'test_clean_{}.py'.format(self.base_name))
+            self.scripts_dir, 'test_clean_{}.py'.format(self.base_name))
         with open(test_cleaning_filename, 'wt') as writer:
             self.write_test_cleaning_boilerplate(writer)
             n_cols = len(self._summary['column_names'])
