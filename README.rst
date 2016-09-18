@@ -2,6 +2,9 @@
     :target: https://travis-ci.org/DataKind-SG/test-driven-data-cleaning# Test Driven Data Cleaning
     :alt: Build Status
 
+.. image:: https://coveralls.io/repos/github/DataKind-SG/test-driven-data-cleaning/badge.svg?branch=master
+    :target: https://coveralls.io/github/DataKind-SG/test-driven-data-cleaning?branch=master
+
 This package provides a framework for collaborative, test-driven data cleaning. The framework enables a reproducible method for data cleaning that can be easily validated.
     
 For a given tabular data set, a Trello board is populated with cards for each column so that team members can tag themselves to a column and ensure that work does not overlap. The cards include summary statistics of the columns that can be useful for writing methods to clean the column. Method stubs and test stubs are also scaffolded out for team members to fill out.
