@@ -2,12 +2,12 @@ import os
 import subprocess
 import pytest
 
-from tddc import build
+from tddc import build_python
 
 
 @pytest.fixture()
 def build_class(fixtures_dir, input_filename, tmpdir):
-    return build.Scripts(
+    return build_python.Scripts(
         summaries_root_dir=fixtures_dir,
         input_file=input_filename,
         scripts_root_dir=tmpdir.strpath,

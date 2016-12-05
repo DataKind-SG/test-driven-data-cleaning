@@ -2,7 +2,8 @@
 Usage:
   tddc summarize <input_file> [--output=<dir>] [--null=<NA>]
   tddc build_trello <input_file> [--output=<dir>]
-  tddc build <input_file> [--output=<dir>]
+  tddc build_python <input_file> [--output=<dir>]
+  tddc build_r <input_file> [--output=<dir>]
   tddc -h | --help
   tddc --version
 
@@ -17,7 +18,7 @@ import os
 import sys
 
 import tddc
-from tddc import summarize, build_trello, build
+from tddc import summarize, build_trello, build_python
 
 
 def get_input_root_dir():
@@ -45,8 +46,15 @@ def execute(cli_args):
             trello_summary_root_dir=get_output_root_dir(),
             output_dir=arguments['--output']
         )
-    elif arguments['build']:
-        build.go(
+    elif arguments['build_python']:
+        build_python.go(
+            summaries_root_dir=get_input_root_dir(),
+            input_file=arguments['<input_file>'],
+            scripts_root_dir=get_output_root_dir(),
+            output_dir=arguments['--output']
+        )
+    elif arguments['build_r']:
+        build_r.go(
             summaries_root_dir=get_input_root_dir(),
             input_file=arguments['<input_file>'],
             scripts_root_dir=get_output_root_dir(),

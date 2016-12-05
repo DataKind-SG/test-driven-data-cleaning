@@ -56,9 +56,12 @@ Once you create it, you can try to run that step again. This will create a Trell
 
 Finally, you can run:
 
-``$ tddc build foobar_data.csv``
+``$ tddc build_python foobar_data.csv``
 
-This outputs a script into the output/ folder that contains method stubs and glue code to clean the data set. It also outputs stubs for tests in output/.
+This outputs a python script into the output/ folder that contains method stubs and glue code to clean the data set. It also outputs stubs for python tests in output/.
+
+Alternatively, for R scripts you can run:
+``$ tddc build_r foobar_data.csv``
 
 Contributing:
 =============
