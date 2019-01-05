@@ -17,7 +17,7 @@ install_requires = [
     'backports.functools_lru_cache==1.2.1',
     'docopt==0.6.2',
     'py-trello==0.6.1',
-    'PyYAML==3.12',
+    'PyYAML==4.2.b4',
 ]
 
 short_description = 'Scaffold out methods and tests for collaborative data ' \
