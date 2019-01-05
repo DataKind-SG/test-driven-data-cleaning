@@ -19,7 +19,7 @@ You should have a Trello account. If not, you can create one at https://trello.c
 Usage:
 ======
 
-This works on Linux with Python 2.7, 3.3, 3.4 and 3.5, and on OSX with Python 2.7 and 3.5 (and probably 3.3 and 3.4, but those haven't been tested).
+This works on Linux with Python 2.7, 3.3, 3.4, 3.5 and 3.6 and on OSX with Python 2.7 and 3.5, 3.6 and 3.7 (and probably 3.3 and 3.4, but those haven't been tested).
 It works on Windows (tested using Python 3.5.2 :: Anaconda 4.1.1 (64-bit)).
 Integration with Trello on Windows using tddc is yet to be tested though.
 
